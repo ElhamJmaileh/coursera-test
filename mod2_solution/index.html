@@ -1,71 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Food</title>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Responsive Layout</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<style>
+  *{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" media="screen">    
-  </head>
-  <body>
-    <header>
-     <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed visible-xs-block" data-toggle="collapse" data-target="#nav-list" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Food, LLC</a>
-        </div>
+body{
+  font-family: 'Lato', sans-serif;  
+}
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="nav-list">
-          <ul class="nav navbar-nav navbar-right visible-xs-block">
-            <li><a href="#chicken">Chicken</a></li>
-            <li><a href="#beef">Beef</a></li>
-            <li><a href="#sushi">Sushi</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    </header>    
-    <div class="container" id='header'>
-      <h1>MENU</h1>
-    </div>
-    <div class="container" id='chicken'>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="card">
-            <h3 class='card-header'>Chicken</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+.row{
+  width: 100%;
+}
+
+.menu-title{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container{
+ position: relative;
+ top:60px;
+ margin: 15px; 
+}
+
+.item{
+  position: relative;
+  top: 0;
+  background-color:#999999;
+  margin: 15px;
+  padding: 25px;
+  border: 3px solid #000;
+}
+
+.item p{
+  margin-top: 18px;
+  text-align: justify;
+  font-size:100%;
+}
+
+.item-title{
+  position: absolute;
+  top:0;
+  right: 0px;
+  background: green; 
+  padding: 6px 90px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+#title-one {
+  background-color: #D59898;
+} 
+
+#title-two{
+  background-color: #C14543;
+}
+
+#title-three{
+  background-color: #E5D198;
+}
+
+/* Simple Responsive Framework. */
+/*------ Desktop ------*/
+@media (min-width: 992px){
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;  
+  }
+  .col-lg-1 {
+    width: 8.33%;
+  }
+  .col-lg-2 {
+    width: 16.66%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-8 {
+    width: 66.66%;
+  }
+  .col-lg-9 {
+    width: 74.99%;
+  }
+  .col-lg-10 {
+    width: 83.33%;
+  }
+  .col-lg-11 {
+    width: 91.66%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+
+}
+
+
+/*------ Tablet ------*/
+@media (min-width: 768px) and (max-width: 991px){
+  .col-lg-4 {
+    width: 50%;
+    float: left;
+  }
+  .col-lg-tablet{
+   width: 100%;
+   float: left;
+ }
+}
+
+
+/*------ Mobile ------*/
+@media (max-width: 767px){
+  .col-lg-4{
+    width: 100%;
+    float: left;
+  }
+}
+</style>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+    <h1 class="menu-title">Our menu</h1>
+      <div class="col-lg-4">
+        <div class="item">
+          <div class="item-title" id="title-one">
+            <h3>Chicken</h3>
           </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perferendis enim, consequatur obcaecati iusto! Quia aliquam, obcaecati explicabo adipisci non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perferendis enim, consequatur obcaecati iusto! Quia aliquam, obcaecati explicabo adipisci non.
+          </p>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="card" id='beef'>
-            <h3 class='card-header'>Beef</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="item">
+         <div class="item-title" id="title-two">
+          <h3>Beef</h3>
         </div>
-        <div class="col-md-4 col-sm-12 col-xs-12">
-          <div class="card" id='sushi'>
-            <h3 class='card-header'>Sushi</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          </div>
-        </div>                
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perferendis enim, consequatur obcaecati iusto! Quia aliquam, obcaecati explicabo adipisci non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perferendis enim, consequatur obcaecati iusto! Quia aliquam, obcaecati explicabo adipisci non.
+        </p>
       </div>
     </div>
+    <div class="col-lg-4 col-lg-tablet">
+      <div class="item">
+       <div class="item-title" id="title-three">
+        <h3>Sushi</h3>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perferendis enim, consequatur obcaecati iusto! Quia aliquam, obcaecati explicabo adipisci non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa perferendis enim, consequatur obcaecati iusto! Quia aliquam, obcaecati explicabo adipisci non.
+      </p>
+    </div>
+  </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+</div>
+</div>
+</body>
 </html>
